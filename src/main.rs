@@ -13,12 +13,17 @@ fn main() {
     for i in numbers {
         println!("{}", i);
     }
+    let animals = vec!["Dog", "Cat", "Bird"];
 
     while !rl.window_should_close() {
         let mut d = rl.begin_drawing(&thread);
 
         d.clear_background(Color::WHITE);
         d.draw_text("Hello, world!", 12, 12, 20, Color::BLACK);
+
+        for (index, animal) in animals.iter().enumerate() {
+            d.draw_text(animal, 100, (index as i32) * 100 + 50, 30, Color::BLUE);
+        }
 
         for y in 100..150 {
             d.draw_circle_lines(((y as f32)*0.1) as i32, y, (y as f32)*0.1, Color::BEIGE);
