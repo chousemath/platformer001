@@ -1,6 +1,4 @@
 use raylib::prelude::*;
-use raylib::ffi::Vector2;
-use raylib::ffi::KeyboardKey;
 
 pub fn run() {
     const SCREEN_WIDTH: i32 = 800;
